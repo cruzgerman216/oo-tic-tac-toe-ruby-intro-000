@@ -19,7 +19,7 @@ def display_board
   puts " #{@board[6]} | #{@board[7]} | #{@board[8]} "
 end
 
-def WIN_COMBINATIONS 
+def WIN_COMBINATIONS
 @WIN_COMBINATIONS = [
   [0, 1, 2],
   [3, 4, 5],
