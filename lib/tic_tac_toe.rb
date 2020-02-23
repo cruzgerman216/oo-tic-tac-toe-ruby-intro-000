@@ -32,6 +32,6 @@ def WIN_COMBINATIONS
 ].freeze
 end
   def play
-    puts display_board
+    puts WIN_COMBINATIONS
   end
 end
