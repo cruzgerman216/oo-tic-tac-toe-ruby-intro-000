@@ -32,6 +32,6 @@ def WIN_COMBINATIONS
 ].freeze
 end
   def play
-    puts @WIN_COMBINATIONS[0][0]
+    puts @WIN_COMBINATIONS[0]
   end
 end
