@@ -18,7 +18,8 @@ def display_board
   puts "-----------"
   puts " #{@board[6]} | #{@board[7]} | #{@board[8]} "
 end
+
   def play
-    puts"yo"
+    puts dispaly_board
   end
 end
