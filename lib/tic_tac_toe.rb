@@ -20,6 +20,6 @@ def display_board
 end
 
   def play
-    puts dispaly_board
+    puts display_board
   end
 end
