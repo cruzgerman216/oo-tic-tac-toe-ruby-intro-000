@@ -34,23 +34,27 @@ def valid_move?(index)
 end
 
 def won?
-  WIN_COMBINATIONS.detect do |combo|
-    @board[combo[0]] == @board[combo[1]] &&
-      @board[combo[1]] == @board[combo[2]] &&
-      position_taken?(@board, combo[0])
-  end
+  odp = WIN_COMBINATIONS.detect do |comb|
+    @board[comb[0]]=="X" && @board[comb[1]]=="X" && @board[comb[2]]=="X" || @board[comb[0]]=="O" && @board[comb[1]]=="O" && @board[comb[2]]=="O"
+      end
+odp ? odp : false
 end
-
 def full?
-  @board.all? { |token| token == 'X' || token == 'O' }
+  @board.all?{|slot| slot == "X" || slot == "O"}? true : false
 end
-
 def draw?
-  !won? && full?
+  won? ? false : full? ? true : false
 end
-
 def over?
-  won? || draw?
+  won? || draw? || full?
+end
+def winner
+  win = won?
+  if(!win)
+    nil
+  else
+    @board[win[0]]
+  end
 end
 
 def input_to_index(user_input)
