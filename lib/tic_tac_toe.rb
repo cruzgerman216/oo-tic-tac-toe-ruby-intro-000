@@ -46,11 +46,11 @@ def full?
 end
 
 def draw?
-  !won?(@board) && full?(@board)
+  !won? && full?
 end
 
 def over?
-  won?(@board) || draw?(@board)
+  won? || draw?
 end
 
 def input_to_index(user_input)
@@ -91,4 +91,5 @@ end
       puts "Cat's Game!"
     end
   end
+  
 end
